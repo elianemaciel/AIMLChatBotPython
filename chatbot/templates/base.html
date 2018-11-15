@@ -1,0 +1,23 @@
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<title>Converse com a Manuela</title>
+</head>
+<body>
+
+	<form action="." method="post">
+		    {% csrf_token %} 
+    {{ form.as_p }}
+    <input type="submit" value="OK">
+	</form>
+
+	{{message}}
+
+
+	{% for mensagem in objects_list %}
+    <li>
+    	{{mensagem.data}} - {{mensagem.sender}} : {{ mensagem.text}}
+	{% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<aiml version="1.0.1" encoding="UTF-8" xmlns:aiml="http://alicebot.org/2001/AIML-1.0.1">
+<!-- basic_chat.aiml -->
+<!--author: eifmaciel-->
+
+<!-- Inicio da conversa -->
+<category>
+  <pattern>OLA</pattern>
+  <template>
+    <random>
+      <li>Olá! Sou a Robô e tentarei te ajudar com as dúvidas! Qual seu nome?</li>
+      <li>Oi! Sou a Robô e tentarei te ajudar com as dúvidas! Como se chama?</li>
+    </random>
+  </template>
+</category>
+
+<category>
+   <pattern>OLA * TUDO BEM?</pattern>
+   
+   <template>
+      <srai>OLA</srai>
+   </template>
+   
+</category>
+<category>
+   <pattern>OI</pattern>
+   
+   <template>
+      <srai>OLA</srai>
+   </template>
+   
+</category>
+<category>
+   <pattern>BOM DIA</pattern>
+   
+   <template>
+      <srai>OLA</srai>
+   </template>
+   
+</category>
+
+<category>
+   <pattern>BOA TARDE</pattern>
+   
+   <template>
+      <srai>OLA</srai>
+   </template>
+   
+</category>
+
+<category>
+   <pattern>BOA NOITE</pattern>
+   
+   <template>
+      <srai>OLA<star/></srai>
+   </template>
+   
+</category>
+
+<!-- Nome do usuário -->
+<category>
+  <pattern>MEU NOME É * </pattern>
+  <template>
+    Olá <set name = "username"> <star/>! </set> Como posso ajudar?
+  </template>  
+</category>  
+
+<category>
+  <pattern>EU ME CHAMO * </pattern>
+  <template>
+    Olá <set name = "username"> <star/>! </set> Como posso ajudar?
+  </template>  
+</category>
+
+<category>
+  <pattern>ME CHAMO * </pattern>
+  <template>
+    Olá <set name = "username"> <star/>! </set> Como posso ajudar?
+  </template>  
+</category>  
+
+<category>
+  <pattern> SOU O * </pattern>
+  <template>
+    Olá <set name = "username"> <star/>! </set> Como posso ajudar?
+  </template>  
+</category>
+
+<category>
+  <pattern> SOU A * </pattern>
+  <template>
+    Olá <set name = "username"> <star/>! </set> Como posso ajudar?
+  </template>  
+</category>  
+   
+<category>
+  <pattern>OBRIGADA</pattern>
+  <template>
+      <get name = "username"/> De nada estamos a disposição!
+  </template>  
+</category>
+	
+</aiml>
