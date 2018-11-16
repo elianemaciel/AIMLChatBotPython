@@ -6,8 +6,9 @@ import aiml
 import os, sys # Para entrada e saída de dados e fechar o programa
 from app.models import Dialog, Message
 
+from django.views.decorators.csrf import csrf_exempt
 
-
+@csrf_exempt
 def my_view(request):
 
     # Create the kernel and learn AIML files
@@ -18,7 +19,7 @@ def my_view(request):
         kernel.respond("load aiml b")
     except:
         print("ERROR")
-    import ipdb; ipdb.set_trace()
+    # import ipdb; ipdb.set_trace()
     if request.method == 'POST':
         dialogo = Dialog.objects.filter(owner=request.user).order_by('-id')[0]
         form = ChatbotForm(request.POST)
@@ -33,9 +34,7 @@ def my_view(request):
             return render(request, 'base.html', {'form': form, 'message': response, 'objects_list': mensagens})
     else:
         form = ChatbotForm()
-        
+
         dialogo = Dialog.objects.get_or_create(owner=request.user)
 
         return render(request, 'base.html', {'form': form})
-
-

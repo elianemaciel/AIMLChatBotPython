@@ -1,23 +1,42 @@
+{% load static %}
 <html lang="pt-br">
 <head>
-<meta charset="utf-8">
-<title>Converse com a Manuela</title>
+    <meta charset="utf-8">
+    <title>Converse com o Cadu</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
+    <img src="{% static 'img/Boneco-Cadu.png' %}" />
 
 	<form action="." method="post">
-		    {% csrf_token %} 
-    {{ form.as_p }}
-    <input type="submit" value="OK">
+		    {% csrf_token %}
+            {{ form.as_p }}
+    <input type="button" value="OK" id="enviar">
 	</form>
 
-	{{message}}
+	<!-- {{message}} -->
 
-
+    <ul>
 	{% for mensagem in objects_list %}
-    <li>
+        <li>
     	{{mensagem.data}} - {{mensagem.sender}} : {{ mensagem.text}}
-	{% endfor %}
+        </li>
+    {% endfor %}
+    </ul>
 
+<script>
+    $(document).ready(function() {
+
+        $("#enviar").on("click", function(){
+            $.ajax({
+              type: "POST",
+              url: '/',
+              data: $('#id_message').val(),
+              dataType: 'json'
+            });
+        });
+
+    });
+</script>
 </body>
 </html>
