@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
 <aiml version="1.0.1" encoding="UTF-8" xmlns:aiml="http://alicebot.org/2001/AIML-1.0.1">
     <!-- std-startup.xml -->
 
@@ -13,16 +15,18 @@
         <template>
             <learn>chatbot-aiml/basic_chat.aiml</learn>
             <!-- You can add more aiml files here -->
-            <!--<learn>more_aiml.aiml</learn>-->
+            <learn>chatbot-aiml/questions_plano.aiml</learn>
+            <learn>chatbot-aiml/questions_ecommerce.aiml</learn>
+            <learn>chatbot-aiml/questions_fiscal.aiml</learn>
         </template>
-        
+
     </category>
 
     <category>
       <pattern>*</pattern>
       <template>
          Desculpe! Ainda estou aprendendo! Por favor, como posso ajudar?
-      </template>  
+      </template>
     </category>
 
 

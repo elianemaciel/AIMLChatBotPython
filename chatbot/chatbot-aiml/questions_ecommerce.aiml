@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<aiml version="1.0.1" encoding="UTF-8" xmlns:aiml="http://alicebot.org/2001/AIML-1.0.1">
+<!-- basic_chat.aiml -->
+<!--author: eifmaciel-->
+<category>
+  <pattern>ECOMMERCE</pattern>
+  <template>
+    Antes de você emitir sua nota fiscal, existem alguns pontos que você precisa prestar atenção,
+    tanto dentro do sistema, quanto na sua empresa.
+    Para a sua empresa emitir nota fiscal eletrônica, é necessário que ela possua: CNPJ, Inscrição Estadual,
+    Credenciamento na SEFAZ (Secretaria da Fazenda) do seu estado e Certificado digital
+  </template>
+</category>
+
+</aiml>

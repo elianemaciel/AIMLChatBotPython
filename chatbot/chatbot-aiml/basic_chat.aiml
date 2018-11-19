@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <aiml version="1.0.1" encoding="UTF-8" xmlns:aiml="http://alicebot.org/2001/AIML-1.0.1">
 <!-- basic_chat.aiml -->
 <!--author: eifmaciel-->
@@ -7,53 +8,53 @@
   <pattern>OLA</pattern>
   <template>
     <random>
-      <li>Olá! Sou a Robô e tentarei te ajudar com as dúvidas! Qual seu nome?</li>
-      <li>Oi! Sou a Robô e tentarei te ajudar com as dúvidas! Como se chama?</li>
+      <li>Olá! Sou o Cadu e tentarei te ajudar com as dúvidas! Qual seu nome?</li>
+      <li>Oi! Sou o Cadu e tentarei te ajudar com as dúvidas! Como se chama?</li>
     </random>
   </template>
 </category>
 
 <category>
    <pattern>OLA * TUDO BEM?</pattern>
-   
+
    <template>
       <srai>OLA</srai>
    </template>
-   
+
 </category>
 <category>
    <pattern>OI</pattern>
-   
+
    <template>
       <srai>OLA</srai>
    </template>
-   
+
 </category>
 <category>
    <pattern>BOM DIA</pattern>
-   
+
    <template>
       <srai>OLA</srai>
    </template>
-   
+
 </category>
 
 <category>
    <pattern>BOA TARDE</pattern>
-   
+
    <template>
       <srai>OLA</srai>
    </template>
-   
+
 </category>
 
 <category>
    <pattern>BOA NOITE</pattern>
-   
+
    <template>
       <srai>OLA<star/></srai>
    </template>
-   
+
 </category>
 
 <!-- Nome do usuário -->
@@ -61,42 +62,98 @@
   <pattern>MEU NOME É * </pattern>
   <template>
     Olá <set name = "username"> <star/>! </set> Como posso ajudar?
-  </template>  
-</category>  
+  </template>
+</category>
 
 <category>
   <pattern>EU ME CHAMO * </pattern>
   <template>
     Olá <set name = "username"> <star/>! </set> Como posso ajudar?
-  </template>  
+  </template>
 </category>
 
 <category>
   <pattern>ME CHAMO * </pattern>
   <template>
     Olá <set name = "username"> <star/>! </set> Como posso ajudar?
-  </template>  
-</category>  
-
-<category>
-  <pattern> SOU O * </pattern>
-  <template>
-    Olá <set name = "username"> <star/>! </set> Como posso ajudar?
-  </template>  
+  </template>
 </category>
 
 <category>
-  <pattern> SOU A * </pattern>
+  <pattern>SOU O * </pattern>
   <template>
     Olá <set name = "username"> <star/>! </set> Como posso ajudar?
-  </template>  
-</category>  
-   
+  </template>
+</category>
+
+<category>
+  <pattern>SOU A *</pattern>
+  <template>
+    Olá <set name = "username"> <star/>! </set> Como posso ajudar?
+  </template>
+</category>
+
+<!-- Dúvidas -->
+<category>
+  <pattern>PODE ME TIRAR DUVIDA</pattern>
+  <template>
+      <random>
+          <li>Posso sim, me diga como posso ajudar?</li>
+          <li>Claro, como posso ajudar?</li>
+      </random>
+
+  </template>
+</category>
+
+<category>
+  <pattern>_ TIRAR DÚVIDAS _</pattern>
+  <template>
+    <srai>PODE ME TIRAR DUVIDA</srai>
+  </template>
+</category>
+
+<category>
+  <pattern>_ TIRAR _ DÚVIDAS _</pattern>
+  <template>
+    <srai>PODE ME TIRAR DUVIDA</srai>
+  </template>
+</category>
+
+<category>
+  <pattern>* PODE ME AJUDAR</pattern>
+  <template>
+    <srai>PODE ME TIRAR DUVIDA</srai>
+  </template>
+</category>
+
+<category>
+  <pattern>* TIRAR DUVIDA *</pattern>
+  <template>
+    <srai>PODE ME TIRAR DUVIDA</srai>
+  </template>
+</category>
+<!-- / Dúvidas -->
+
+<category>
+  <pattern>* FALAR POR TELEFONE *</pattern>
+  <template>
+    Nosso atendimento é só pelo chat e chamados, se quiser posso te passar para um de nossos atendentes.
+  </template>
+</category>
+
+<category>
+  <pattern>* PODE ME AJUDAR</pattern>
+  <template>
+    <that>MEU NOME É * </that>
+    Posso tirar suas dúvidas com o sistema, ainda estou aprendendo, mas vou me esforçar!!
+  </template>
+</category>
+
 <category>
   <pattern>OBRIGADA</pattern>
   <template>
       <get name = "username"/> De nada estamos a disposição!
-  </template>  
+  </template>
 </category>
-	
+
 </aiml>

@@ -1,18 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <aiml version="1.0.1" encoding="UTF-8" xmlns:aiml="http://alicebot.org/2001/AIML-1.0.1">
 <!-- basic_chat.aiml -->
 <!--author: eifmaciel-->
 <category>
-  <pattern>COMO ESCOLHO UM PLANO?</pattern>
+  <pattern>* COMO ESCOLHO UM PLANO?</pattern>
   <template>
     Para escolher seu plano, acesso o Cake ERP utilizando seu login e senha e clique na engrenagem no menu superior direito. Escolha a opção Meu Plano.
-  </template>  
-</category>
-<category>
-  <pattern>Não estou conseguindo emitir Nota Fiscal</pattern>
-  <template>
-     Por favor, me descreva o problema que está ocorrendo.
-  </template>  
+  </template>
 </category>
 
-  
+<category>
+  <pattern>* INATIVAR * CONTA *</pattern>
+  <template>
+      Caso nao queira mais utilizar o Cake ERP, você pode inativar a sua conta a qualquer momento.
+      Para isso, acesse, no menu superior, Configurações, Se estiver certo da inativação, clique no botão Inativar.
+      Feito! Sua conta está inativada.
+      Para mais detalhes pode ver em: https://suporte.cakeerp.com/portal/kb/articles/como-inativar-minha-conta
+  </template>
+</category>
+
 </aiml>
