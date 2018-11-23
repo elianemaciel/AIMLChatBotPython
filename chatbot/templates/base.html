@@ -2,27 +2,40 @@
 <html lang="pt-br">
 <head>
     <meta charset="utf-8">
-    <title>Converse com o Cadu</title>
+    <title>ChatBot</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </head>
 <body>
+    <h1>Converse com o Cadu!</h1>
     <img src="{% static 'img/Boneco-Cadu.png' %}" />
+
+
+    <div class="card">
+        <div class="card-body">
+            <ul class="list-group list-group-flush">
+          	{% for mensagem in objects_list %}
+                  <li class="list-group-item {% if mensagem.sender != None %}text-right{% endif %}">
+              	       {{mensagem.data|date:"d/m h:i "}} - {{mensagem.sender|default:"Cadu"}} : {{ mensagem.text}}
+                  </li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+
 
 	<form action="." method="post">
 		    {% csrf_token %}
             {{ form.as_p }}
-    <input type="submit" value="OK" id="enviar">
+    <!-- <input type="submit" value="OK" id="enviar"> -->
 	</form>
 
-	<!-- {{message}} -->
-
-    <ul>
-	{% for mensagem in objects_list %}
-        <li>
-    	{{mensagem.data}} - {{mensagem.sender}} : {{ mensagem.text}}
-        </li>
-    {% endfor %}
-    </ul>
 
 <script>
     // $(document).ready(function() {

@@ -8,7 +8,7 @@
   <pattern>OLA</pattern>
   <template>
     <random>
-      <li>Olá! Sou o Cadu e tentarei te ajudar com as dúvidas! Qual seu nome?</li>
+      <li><get name = "cumprimento"/> Sou o Cadu e tentarei te ajudar com as dúvidas! Qual seu nome?</li>
       <li>Oi! Sou o Cadu e tentarei te ajudar com as dúvidas! Como se chama?</li>
     </random>
   </template>
@@ -52,7 +52,7 @@
    <pattern>BOA NOITE</pattern>
 
    <template>
-      <srai>OLA<star/></srai>
+      <set name = "cumprimento"><star/></set><srai>OLA<star/></srai>
    </template>
 
 </category>
@@ -140,12 +140,27 @@
     Nosso atendimento é só pelo chat e chamados, se quiser posso te passar para um de nossos atendentes.
   </template>
 </category>
+<!-- 
+<category>
+  <pattern>* PODE ME AJUDAR?</pattern>
+  <template>
+    <that>Olá <set name = "username"> <star/>! </set> Como posso ajudar?</that>
+    Posso tirar suas dúvidas com o sistema, ainda estou aprendendo, mas vou me esforçar!!
+  </template>
+</category> -->
+
 
 <category>
-  <pattern>* PODE ME AJUDAR</pattern>
+  <pattern>QUAL SEU NOME?</pattern>
   <template>
-    <that>MEU NOME É * </that>
-    Posso tirar suas dúvidas com o sistema, ainda estou aprendendo, mas vou me esforçar!!
+    Eu sou o Cadu do Cake ERP. Eu serei seu guia para os próximos passos no sistema.
+  </template>
+</category>
+
+<category>
+  <pattern>* SEU NOME?</pattern>
+  <template>
+    <srai>QUAL SEU NOME?</srai>
   </template>
 </category>
 
