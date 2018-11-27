@@ -11,30 +11,33 @@ from django.views.decorators.csrf import csrf_exempt
 @csrf_exempt
 def my_view(request):
 
-    # Create the kernel and learn AIML files
-    # import ipdb; ipdb.set_trace()
     try:
         kernel = aiml.Kernel()
-        kernel.learn("chatbot-aiml/start.xml")
-        kernel.respond("load aiml b")
-    except:
-        print("ERROR")
-    # import ipdb; ipdb.set_trace()
+
+        if os.path.isfile("chatbot-aiml/bot_brain.brn"):
+            kernel.bootstrap(brainFile = "bot_brain.brn")
+        else:
+            kernel.bootstrap(learnFiles="chatbot-aiml/start.xml", commands="load aiml b")
+            kernel.saveBrain("chatbot-aiml/bot_brain.brn")
+    except Exception as e:
+        print("Ocorreu um erro ao tentar fazer o aprendizado! ", e)
+
+    kernel.loadBrain("chatbot-aiml/bot_brain.brn")
+
+    dialogo = Dialog.objects.get_or_create(owner=request.user)[0]
+    form = ChatbotForm()
+    mensagens = Message.objects.filter(dialog=dialogo)
+    import ipdb; ipdb.set_trace();
     if request.method == 'POST':
-        dialogo = Dialog.objects.filter(owner=request.user).order_by('-id')[0]
-        form = ChatbotForm(request.POST)
+        # dialogo = Dialog.objects.filter(owner=request.user).order_by('-id')[0]
+        # form = ChatbotForm(request.POST)
         # check whether it's valid:
-        if form.is_valid():
-            question = form.cleaned_data['message']
-            mensagem1 = Message.objects.create(dialog=dialogo, sender=request.user, text=question)
-            response = kernel.respond(question)
-            mensagem2 = Message.objects.create(dialog=dialogo, text=response)
-            form = ChatbotForm()
-            mensagens = Message.objects.filter(dialog=dialogo)
-            return render(request, 'base.html', {'form': form, 'message': response, 'objects_list': mensagens})
-    else:
-        form = ChatbotForm()
+        question = request.POST.get('message', '')
+        mensagem1 = Message.objects.create(dialog=dialogo, sender=request.user, text=question)
+        response = kernel.respond(question, request.user.id)
+        mensagem2 = Message.objects.create(dialog=dialogo, text=response)
+            
+        
+    return render(request, 'base.html', {'form': form, 'objects_list': mensagens})
+        
 
-        dialogo = Dialog.objects.get_or_create(owner=request.user)
-
-        return render(request, 'base.html', {'form': form})

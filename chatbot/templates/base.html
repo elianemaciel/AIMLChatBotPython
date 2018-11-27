@@ -38,8 +38,11 @@
 
 
 <script>
-    // $(document).ready(function() {
-    //
+$(document).ready(function() {
+    $( "#id_message" ).focus();
+    $('html, body').animate({
+        scrollTop: $("#id_message").offset().top
+    }, 2000);
     //     $("#enviar").on("click", function(){
     //         $.ajax({
     //           type: "POST",
@@ -49,7 +52,7 @@
     //         });
     //     });
     //
-    // });
+});
 </script>
 </body>
 </html>
