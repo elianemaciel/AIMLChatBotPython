@@ -43,7 +43,7 @@
     </category>
 
     <category>
-        <pattern>* EMITIR NOTA FISCAL *</pattern>
+        <pattern>* EMITIR NOTA FISCAL</pattern>
         <template>
             <srai>COMO EMITIR NOTA FISCAL</srai>
         </template>
@@ -274,5 +274,83 @@
             <srai>O QUE E TRIBUTACAO</srai>
         </template>
     </category>
+
+    <category>
+        <pattern>* CAKE ERP</pattern>
+        <template>
+            <srai>CAKE ERP</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* CAKE ERP *</pattern>
+        <template>
+            <srai>CAKE ERP</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>O QUE É CAKE</pattern>
+        <template>
+            <srai>CAKE ERP</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* É CAKE</pattern>
+        <template>
+            <srai>CAKE ERP</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>CAKE ERP</pattern>
+        <template>
+            O Cake ERP é um sistema de gestão on-line, com inteligência e melhores práticas de mercado, feito para micro e pequenos lojistas, distribuidores e franquias.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* FAZER UM ORCAMENTO</pattern>
+        <template>
+            <srai>GERAR PEDIDO</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* ORCAMENTO</pattern>
+        <template>
+            <srai>GERAR PEDIDO</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* FAZER * VENDA</pattern>
+        <template>
+            <srai>GERAR PEDIDO</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* FAZER UMA VENDA</pattern>
+        <template>
+            <srai>GERAR PEDIDO</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* GERAR PEDIDO</pattern>
+        <template>
+            <srai>GERAR PEDIDO</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>GERAR PEDIDO</pattern>
+        <template>
+            Para gerar um pedido, acesse no menu lateral Vendas > Pedidos, na flecha ao lado de Adicionar escolha a opção Pedido
+        </template>
+    </category>
+
 
 </aiml>

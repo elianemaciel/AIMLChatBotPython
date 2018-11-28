@@ -32,4 +32,32 @@
         </template>
     </category>
 
+    <category>
+        <pattern>* E-COMMERCE</pattern>
+        <template>
+            O Cake ERP possui integração com os e-commerces Rakuten, VNDA, e siscommerce
+        </template>
+    </category>
+
+    <category>
+        <pattern>* ECOMMERCE</pattern>
+        <template>
+            O Cake ERP possui integração com os e-commerces Rakuten, VNDA, e siscommerce
+        </template>
+    </category>
+
+    <category>
+        <pattern>* ECOMMERCE *</pattern>
+        <template>
+            O Cake ERP possui integração com os e-commerces Rakuten, VNDA, e siscommerce
+        </template>
+    </category>
+
+    <category>
+        <pattern>ECOMMERCE</pattern>
+        <template>
+            O Cake ERP possui integração com os e-commerces Rakuten, VNDA, e siscommerce
+        </template>
+    </category>
+
 </aiml>
