@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<aiml version="1.0">
+    <category>
+        <pattern>*</pattern>
+        <template>
+            <random>
+                <li>Desculpe! Ainda estou aprendendo! Por favor, como posso ajudar?</li>
+                <li>Não entendi! Ainda estou aprendendo! Posso te ajudar com PDVs, Ecommerce e Notas Fiscais</li>
+                <li>Desculpe! Ainda estou aprendendo! Gostaria de falar com algum de nossos atendentes?</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>SIM</pattern>
+        <that>GOSTARIA DE FALAR COM ALGUM DE NOSSOS ATENDENTES*</that>
+        <template>
+            Vou te encaminhar para um de nossos atendentes. Obrigado pela paciencia! Até a próxima!
+        </template>
+    </category>
+
+    <category>
+        <pattern>NAO</pattern>
+        <that>GOSTARIA DE FALAR COM ALGUM DE NOSSOS ATENDENTES*</that>
+        <template>
+            Como posso te ajudar? Posso te responder sobre PDVs, Ecommerce e Notas Fiscais
+        </template>
+    </category>
+
+    <category>
+        <pattern>POSSO APENAS TESTAR</pattern>
+        <template>
+            Sería Ótimo. Fique a vontade!
+        </template>
+    </category>
+
+    <category>
+        <pattern>* ESPERO * AJUDADO *</pattern>
+        <template>
+            <srai>dvAJUDADO</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>ESPERO * AJUDADO *</pattern>
+        <template>
+            <srai>DVAJUDADO</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* ESPERO * AJUDADO</pattern>
+        <template>
+            <srai>DVAJUDADO</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>DVAJUDADO</pattern>
+        <template>
+            <random>
+                <li>Certamente, muito obrigado!</li>
+                <li>Obrigado pelo apoio!</li>
+                <li>Você ajudou bastante.</li>
+                <li>Muito obrigado!</li>
+            </random>
+        </template>
+    </category>
+</aiml>

@@ -1,52 +1,278 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<aiml version="2.0" encoding="UTF-8" xmlns:aiml="http://alicebot.org/2001/AIML-1.0.1">
-<!-- basic_chat.aiml -->
-<!--author: eifmaciel-->
-<category>
-  <pattern>NÃO * EMITIR NOTA FISCAL *</pattern>
-  <template>
-     Os problemas mais comuns, são com tributação, por favor, me descreva o problema que está ocorrendo.
-  </template>
-</category>
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+    <!-- basic_chat.aiml -->
+    <!--author: eifmaciel-->
+    <category>
+        <pattern>NAO * EMITIR NOTA FISCAL *</pattern>
+        <template>
+            Os problemas mais comuns, são com tributação, por favor, me descreva o problema que está ocorrendo.
+        </template>
+    </category>
 
-<category>
-  <pattern>COMO EMITIR NOTA FISCAL?</pattern>
-  <template>
-    Antes de você emitir sua nota fiscal, existem alguns pontos que você precisa prestar atenção,
-    tanto dentro do sistema, quanto na sua empresa.
-    Para a sua empresa emitir nota fiscal eletrônica, é necessário que ela possua: CNPJ, Inscrição Estadual,
-    Credenciamento na SEFAZ (Secretaria da Fazenda) do seu estado e Certificado digital
-    Pode ver mais no vídeo: https://www.youtube.com/watch?v=8JiaHHWwDfM
+    <category>
+        <pattern>NAO * EMITIR NOTA FISCAL</pattern>
+        <template>
+            Os problemas mais comuns, são com tributação, por favor, me descreva o problema que está ocorrendo.
+        </template>
+    </category>
 
-  </template>
-</category>
+    <category>
+        <pattern>COMO EMITIR NOTA FISCAL</pattern>
+        <template>
+            Antes de você emitir sua nota fiscal, existem alguns pontos que você precisa prestar atenção,
+            tanto dentro do sistema, quanto na sua empresa.
+            Para a sua empresa emitir nota fiscal eletrônica, é necessário que ela possua: CNPJ, Inscrição Estadual,
+            Credenciamento na SEFAZ (Secretaria da Fazenda) do seu estado e Certificado digital
+            Pode ver mais no vídeo: https://www.youtube.com/watch?v=8JiaHHWwDfM
 
-<category>
-  <pattern>COMO * EMITIR * NOTA FISCAL *</pattern>
-  <template>
-    <srai>COMO EMITIR NOTA FISCAL?</srai>
-  </template>
-</category>
+        </template>
+    </category>
 
-<category>
-  <pattern>* COMO EMITIR NOTA FISCAL *</pattern>
-  <template>
-    <srai>COMO EMITIR NOTA FISCAL?</srai>
-  </template>
-</category>
+    <category>
+        <pattern>* EMITIR * NOTA FISCAL *</pattern>
+        <template>
+            <srai>COMO EMITIR NOTA FISCAL</srai>
+        </template>
+    </category>
 
-<category>
-  <pattern>* EMITIR NOTA FISCAL *</pattern>
-  <template>
-    <srai>COMO EMITIR NOTA FISCAL?</srai>
-  </template>
-</category>
+    <category>
+        <pattern>* EMITIR NOTA FISCAL *</pattern>
+        <template>
+            <srai>COMO EMITIR NOTA FISCAL</srai>
+        </template>
+    </category>
 
-<category>
-  <pattern>* NOTA FISCAL *</pattern>
-  <template>
-    O Cake emite notas fiscais.
-  </template>
-</category>
+    <category>
+        <pattern>* EMITIR NOTA FISCAL *</pattern>
+        <template>
+            <srai>COMO EMITIR NOTA FISCAL</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* NOTA FISCAL *</pattern>
+        <template>
+            O Cake emite notas fiscais.
+        </template>
+    </category>
+
+    <category>
+        <pattern>NOTA FISCAL</pattern>
+        <template>
+            <srai>COMO EMITIR NOTA FISCAL</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>TEF</pattern>
+        <template>
+            O TEF é um sistema que permite transações financeiras através da comunicação entre a automação comercial e as adquirentes, que são empresas que fazem a liquidação financeira de pagamentos eletrônicos. Ele funciona através de um aparelho, chamado PinPad, onde são feitas as vendas no débito e crédito, tendo assim maior facilidade para controlar a venda no cartão.
+        </template>
+    </category>
+
+    <category>
+        <pattern>O QUE * TEF</pattern>
+        <template>
+            <srai>TEF</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* TEF</pattern>
+        <template>
+            <srai>TEF</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>SINCRONIZACAO * DADOS * PDVS * CAKE</pattern>
+        <template>
+            Você pode ter acesso às informações (clientes, vendas, etc) de um PDV no seu Cake Web (ERP da retaguarda)
+            e também nos outros PDVs da loja. Para isso, é preciso fazer a sincronização dos dados.
+            Os PDVs fazem a sincronização de dados automaticamente a cada 30 segundos (padrão).
+        </template>
+    </category>
+
+    <category>
+        <pattern>* COPIAR OU DUPLICAR UMA TRIBUTACAO</pattern>
+        <template>
+            No cadastro de tributações existe uma funcionalidade muito útil e que poupa muito tempo do seu trabalho, que é a opção de duplicar a tributação. Como explicamos no cadastro de tributações, sugerimos primeiramente criar uma tributação completa e depois utilizar a opção de duplicar para não precisar informar todos os campos novamente, sendo necessário apenas alterar as informações necessárias.
+
+            A opção de duplicar dentro do cadastro de tributações pode ser utilizada em três momentos, a primeira opção que ela pode ser utilizada é para duplicar a tributação completa, ou seja, serão replicados todos os estados origem e destino e todas as naturezas da operação de cada um deles, ou seja, duplica a tributação por inteiro mesmo.
+            Para utilizar essa opção, você deve entrar no cadastro de tributações em Cadastros > Fiscal > Tributações e clicar sobre o botão Duplicar do registro que deseja fazer a cópia.
+        </template>
+    </category>
+
+    <category>
+        <pattern>QUAL A DIFERENCA ENTRE AMBIENTE DE HOMOLOGACAO E AMBIENTE DE PRODUCAO?</pattern>
+        <template>
+            Cada estado montou dois ambientes para o recebimento de notas fiscais (NF-e): Homologação e Produção.
+            O ambiente de Homologação é o ambiente de testes. Ele existe para que você possa realizar as adaptações necessárias antes de operar em produção, emitindo NF-e sem valor fiscal.
+            Já o ambiente de Produção serve para a emissão de NF-e com valor fiscal junto à SEFAZ.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* AMBIENTE DE HOMOLOGACAO E AMBIENTE DE PRODUCAO</pattern>
+        <template>
+            Cada estado montou dois ambientes para o recebimento de notas fiscais (NF-e): Homologação e Produção.
+            O ambiente de Homologação é o ambiente de testes. Ele existe para que você possa realizar as adaptações necessárias antes de operar em produção, emitindo NF-e sem valor fiscal.
+            Já o ambiente de Produção serve para a emissão de NF-e com valor fiscal junto à SEFAZ.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* AMBIENTE DE HOMOLOGACAO PARA O DE PRODUCAO</pattern>
+        <template>
+            Após realizar os testes de emissão de notas fiscais no ambiente de Homologação, você deve alterá-lo para Produção.
+            Para realizar esse processo, acesse, no menu superior, Configurações > Configurações. Depois, na aba Financeiro, altere o Ambiente de emissão de Nota Fiscal de Homologação para Produção.
+        </template>
+    </category>
+
+    <category>
+        <pattern>SUBSTITUIR UM CERTIFICADO DIGITAL</pattern>
+        <template>
+            Quando o Certificado Digital da sua empresa vencer, é preciso, após a renovação, importá-lo novamente no Cake ERP.
+            Para isso, acesse, na tela inicial do Cake ERP, o menu superior esquerdo Configurações > Certificado Digital.
+            Selecione o arquivo do seu certificado e digite a senha. Depois, clique em Salvar.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* SUBSTITUIR UM CERTIFICADO DIGITAL *</pattern>
+        <template>
+            <srai>SUBSTITUIR UM CERTIFICADO DIGITAL</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* DIFERENCA ENTRE O CERTIFICADO DIGITAL MODELO A1 E A3</pattern>
+        <template>
+            O Certificado Digital Modelo A1 é um arquivo digital gerado e armazenado no próprio computador pessoal do usuário. Pode ser importado no Cake ERP e ser utilizado de qualquer máquina que você acessar o seu usuário do sistema.
+            Enquanto isso, o Certificado Digital Modelo A3 só pode ser utilizado através de um Token ou Leitora+Cartão; ou seja, você precisa de um desses dois equipamentos conectados ao computador para poder emitir uma nota fiscal.
+        </template>
+    </category>
+
+    <category>
+        <pattern>IMPORTAR O CERTIFICADO DIGITAL</pattern>
+        <template>
+            Para que você consiga gerar as notas fiscais eletrônicas, o Certificado Digital deve ser cadastrado.
+            Para cadastrá-lo acesse na tela inicial do Cake ERP o menu superior esquerdo Configurações > Certificado Digital.
+            Selecione o arquivo do seu certificado e digite a senha. Depois, clique em Salvar.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* IMPORTAR O CERTIFICADO DIGITAL</pattern>
+        <template>
+            <srai>IMPORTAR O CERTIFICADO DIGITAL</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>O QUE E CERTIFICADO DIGITAL</pattern>
+        <template>
+            O Certificado Digital é um documento eletrônico que funciona como uma assinatura com validade jurídica que garante proteção às transações eletrônicas e outros serviços via internet (como emissão de nota fiscal), permitindo que pessoas e empresas se identifiquem e assinem digitalmente de qualquer lugar do mundo com mais segurança e agilidade.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* CERTIFICADO DIGITAL</pattern>
+        <template>
+            <srai>O QUE E CERTIFICADO DIGITAL</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>CFOP</pattern>
+        <template>
+            Código Fiscal de Operações e de Prestações das Entradas de Mercadorias e Bens e da Aquisição de Serviços ou CFOP é um código do sistema tributarista brasileiro, determinado pelo governo.
+            É indicado nas emissões de notas fiscais, declarações, guias e escrituração de livros. É utilizado em uma operação fiscal e define se a nota emitida recolhe ou não impostos, movimento de estoque e financeiro.
+            Esse código é formado por quatro números. O primeiro define o tipo de operação (entrada ou saída) e também se a operação é para dentro ou fora do Estado. Os outros se referem ao tipo e finalidade do produto: se o produto foi produzido pelo seu estabelecimento, se é matéria prima, se vai ser consumido, vendido ou até mesmo se é uma venda simples.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* CFOP</pattern>
+        <template>
+            <srai>CFOP</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* CADASTRAR NATUREZA DE OPERACAO</pattern>
+        <template>
+            Para cadastrar uma nova natureza de operação você deve acessar o menu Cadastros > Fiscal > Natureza da Operação. Estando nessa tela, você deve clicar sobre o botão Nova Natureza de Operação conforme mostra imagem abaixo no destaque em vermelho.
+            Primeiramente você deve informar um nome para a natureza que deseja cadastrar no campo Natureza. Este será o nome que aparecerá na DANFE da sua nota fiscal eletrônica em Natureza de Operação. Neste campo é indicado colocar algo referente a operação que está sendo realizada, tais como: Venda, Devolução, Remessa para Conserto, etc.
+            O campo Operação refere-se especificamente a operação que está sendo realizada. É através deste campo que o Cake ERP realiza as validações necessárias para execução do processo.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* NATUREZA DE OPERACAO</pattern>
+        <template>
+            A natureza da operação é o campo que você deve descrever o que está fazendo com o produto.
+            Por exemplo: se você está vendendo, a sua natureza da operação deve ser venda. Se é produto em consignação, a natureza da operação deve ser remessa em consignação.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* NAO CONFIGURAR O TOKEN * NFC-E</pattern>
+        <template>
+            A não configuração do código Token no sistema impedirá a emissão da NFC-e, pois não será possível confirmar a autenticidade da NFC-e por meio da leitura do QR Code impresso no DANFE-NFC-e.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* NAO CONFIGURAR O TOKEN NO EMISSOR NFC-E</pattern>
+        <template>
+            A não configuração do código Token no sistema impedirá a emissão da NFC-e, pois não será possível confirmar a autenticidade da NFC-e por meio da leitura do QR Code impresso no DANFE-NFC-e.
+        </template>
+    </category>
+
+    <category>
+        <pattern>TOKEN</pattern>
+        <template>
+            O token que falamos aqui, é o Código de Segurança do Contribuinte (CSC), seria como uma senha e corresponde a um código alfanumérico, de conhecimento apenas da Secretaria de Fazenda do Estado do emitente e do próprio contribuinte.
+            Esse código é utilizado para garantir a autoria e a autenticidade do DANFE NFC-e e do respectivo QR Code.
+            O código token deverá ser obtido por meio do atendimento online, disponível no site da Secretaria da Fazenda do seu estado. Uma mesma empresa pode utilizar dois tokens ao mesmo tempo, mas não há restrições quanto a quantidade de solicitações do CSC token.
+            O CSC token obtido através da SEFAZ do estado será válido para todos os estabelecimentos do contribuinte naquele estado onde foi concedido o token, que pode ser trocado por u novo mediante a nova solicitação à SEFAZ
+        </template>
+    </category>
+
+    <category>
+        <pattern>* TOKEN *</pattern>
+        <template>
+            <srai>TOKEN</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* TOKEN</pattern>
+        <template>
+            <srai>TOKEN</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>O QUE E TRIBUTACAO</pattern>
+        <template>
+            Tributação consiste no encargo financeiro que o estado impõe ao contribuinte (pessoa física e jurídica) sobre os dividendos dos mesmos.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* TRIBUTACAO</pattern>
+        <template>
+            <srai>O QUE E TRIBUTACAO</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* TRIBUTACOES</pattern>
+        <template>
+            <srai>O QUE E TRIBUTACAO</srai>
+        </template>
+    </category>
 
 </aiml>

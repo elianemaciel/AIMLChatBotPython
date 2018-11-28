@@ -1,174 +1,378 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<aiml version="2.0" encoding="UTF-8" xmlns:aiml="http://alicebot.org/2001/AIML-1.0.1">
+<aiml version="1.0">
 <!-- basic_chat.aiml -->
 <!--author: eifmaciel-->
 
 <!-- Inicio da conversa -->
 <category>
-  <pattern>OLA</pattern>
-  <template>
-    <random>
-      <li><get name = "cumprimento"/> Sou o Cadu e tentarei te ajudar com as dúvidas! Qual seu nome?</li>
-      <li>Oi! Sou o Cadu e tentarei te ajudar com as dúvidas! Como se chama?</li>
-    </random>
-  </template>
+    <pattern>OLA</pattern>
+    <template>
+        <random>
+            <li>Olá! Sou o Cadu e tentarei te ajudar com as dúvidas! Qual seu nome?</li>
+            <li>Oi! Sou o Cadu e tentarei te ajudar com as dúvidas! Como se chama?</li>
+        </random>
+    </template>
 </category>
 
 <category>
-   <pattern>OLA * TUDO BEM?</pattern>
+    <pattern>OLA * TUDO BEM</pattern>
 
-   <template>
-      <srai>OLA</srai>
-   </template>
-
-</category>
-<category>
-   <pattern>OI</pattern>
-
-   <template>
-      <srai>OLA</srai>
-   </template>
+    <template>
+        <srai>OLA</srai>
+    </template>
 
 </category>
 <category>
-   <pattern>BOM DIA</pattern>
+    <pattern>OI</pattern>
 
-   <template>
-      <srai>OLA</srai>
-   </template>
+    <template>
+        <srai>OLA</srai>
+    </template>
 
 </category>
-
 <category>
-   <pattern>BOA TARDE</pattern>
+    <pattern>BOM DIA</pattern>
 
-   <template>
-      <srai>OLA</srai>
-   </template>
+    <template>
+        <srai>OLA</srai>
+    </template>
 
 </category>
 
 <category>
-   <pattern>BOA NOITE</pattern>
+    <pattern>BOA TARDE</pattern>
 
-   <template>
-      <set name = "cumprimento"><star/></set><srai>OLA<star/></srai>
-   </template>
+    <template>
+        <srai>OLA</srai>
+    </template>
+
+</category>
+
+<category>
+    <pattern>BOA NOITE</pattern>
+
+    <template>
+        <set name = "cumprimento"><star/></set><srai>OLA<star/></srai>
+    </template>
+
+</category>
+
+<category>
+    <pattern>TUDO BEM</pattern>
+
+    <template>
+        Tudo bem, como posso te ajudar?
+    </template>
+
+</category>
+
+<category>
+    <pattern>TD BEM</pattern>
+
+    <template>
+        <srai>TUDO BEM</srai>
+    </template>
 
 </category>
 
 <!-- Nome do usuário -->
 <category>
-  <pattern>MEU NOME É * </pattern>
-  <template>
-    Olá <set name = "username"> <star/>! </set> Como posso ajudar?
-  </template>
+    <pattern>MEU NOME É * </pattern>
+    <template>
+        Olá <set name = "username"> <star/>! </set> Como posso ajudar?
+    </template>
 </category>
 
 <category>
-  <pattern>EU ME CHAMO * </pattern>
-  <template>
-    Olá <set name = "username"> <star/>! </set> Como posso ajudar?
-  </template>
+    <pattern>EU ME CHAMO * </pattern>
+    <template>
+        Olá <set name = "username"> <star/>! </set> Como posso ajudar?
+    </template>
 </category>
 
 <category>
-  <pattern>ME CHAMO * </pattern>
-  <template>
-    Olá <set name = "username"> <star/>! </set> Como posso ajudar?
-  </template>
+    <pattern>ME CHAMO * </pattern>
+    <template>
+        Olá <set name = "username"> <star/>! </set> Como posso ajudar?
+    </template>
 </category>
 
 <category>
-  <pattern>SOU O * </pattern>
-  <template>
-    Olá <set name = "username"> <star/>! </set> Como posso ajudar?
-  </template>
+    <pattern>SOU O * </pattern>
+    <template>
+        Olá <set name = "username"> <star/>! </set> Como posso ajudar?
+    </template>
 </category>
 
 <category>
-  <pattern>SOU A *</pattern>
-  <template>
-    Olá <set name = "username"> <star/>! </set> Como posso ajudar?
-  </template>
+    <pattern>SOU A *</pattern>
+    <template>
+        Olá <set name = "username"> <star/>! </set> Como posso ajudar?
+    </template>
 </category>
 
 <!-- Dúvidas -->
 <category>
-  <pattern>PODE ME TIRAR DUVIDA</pattern>
-  <template>
-      <random>
-          <li>Posso sim, me diga como posso ajudar?</li>
-          <li>Claro, como posso ajudar?</li>
-      </random>
+    <pattern>PODE ME TIRAR DUVIDA</pattern>
+    <template>
+        <random>
+            <li>Posso sim, me diga como posso ajudar?</li>
+            <li>Claro, como posso ajudar?</li>
+        </random>
 
-  </template>
+    </template>
 </category>
 
 <category>
-  <pattern>_ TIRAR DÚVIDAS _</pattern>
-  <template>
-    <srai>PODE ME TIRAR DUVIDA</srai>
-  </template>
+    <pattern>* TIRAR DUVIDAS *</pattern>
+    <template>
+        <srai>PODE ME TIRAR DUVIDA</srai>
+    </template>
 </category>
 
 <category>
-  <pattern>_ TIRAR _ DÚVIDAS _</pattern>
-  <template>
-    <srai>PODE ME TIRAR DUVIDA</srai>
-  </template>
+    <pattern>* TIRAR * DUVIDAS</pattern>
+    <template>
+        <srai>PODE ME TIRAR DUVIDA</srai>
+    </template>
 </category>
 
 <category>
-  <pattern>* PODE ME AJUDAR</pattern>
-  <template>
-    <srai>PODE ME TIRAR DUVIDA</srai>
-  </template>
+    <pattern>* PODE ME AJUDAR</pattern>
+    <template>
+        <srai>PODE ME TIRAR DUVIDA</srai>
+    </template>
 </category>
 
 <category>
-  <pattern>* TIRAR DUVIDA *</pattern>
-  <template>
-    <srai>PODE ME TIRAR DUVIDA</srai>
-  </template>
+    <pattern>* TIRAR DUVIDA *</pattern>
+    <template>
+        <srai>PODE ME TIRAR DUVIDA</srai>
+    </template>
 </category>
 <!-- / Dúvidas -->
 
 <category>
-  <pattern>* FALAR POR TELEFONE *</pattern>
-  <template>
-    Nosso atendimento é só pelo chat e chamados, se quiser posso te passar para um de nossos atendentes.
-  </template>
-</category>
-<!-- 
-<category>
-  <pattern>* PODE ME AJUDAR?</pattern>
-  <template>
-    <that>Olá <set name = "username"> <star/>! </set> Como posso ajudar?</that>
-    Posso tirar suas dúvidas com o sistema, ainda estou aprendendo, mas vou me esforçar!!
-  </template>
-</category> -->
-
-
-<category>
-  <pattern>QUAL SEU NOME?</pattern>
-  <template>
-    Eu sou o Cadu do Cake ERP. Eu serei seu guia para os próximos passos no sistema.
-  </template>
+    <pattern>* FALAR POR TELEFONE *</pattern>
+    <template>
+        Nosso atendimento é só pelo chat e chamados, se quiser posso te passar para um de nossos atendentes.
+    </template>
 </category>
 
 <category>
-  <pattern>* SEU NOME?</pattern>
-  <template>
-    <srai>QUAL SEU NOME?</srai>
-  </template>
+    <pattern>*</pattern>
+    <that>QUAL SEU NOME</that>
+    <template>
+        Desculpa! Não entendi seu nome, pode repetir? Ex: Meu nome é Nome
+    </template>
 </category>
 
 <category>
-  <pattern>OBRIGADA</pattern>
-  <template>
-      <get name = "username"/> De nada estamos a disposição!
-  </template>
+    <pattern>*</pattern>
+    <that>COMO SE CHAMA</that>
+    <template>
+        Desculpa! Não entendi seu nome, pode repetir? Ex: Meu nome é Nome
+    </template>
+</category>
+
+<category>
+    <pattern>* SEU NOME</pattern>
+    <template>
+        <srai>QUAL SEU NOME</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>OBRIGADA</pattern>
+    <template>
+        <get name = "username"/>, De nada estamos a disposição!
+    </template>
+</category>
+
+<category>
+    <pattern>OBRIGADO</pattern>
+    <template>
+        <get name = "username"/>, De nada estamos a disposição!
+    </template>
+</category>
+
+<category>
+    <pattern>QUEM É</pattern>
+    <template>
+        <srai>CADU</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>QUEM E</pattern>
+    <template>
+        <srai>CADU</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>QUEM É?</pattern>
+    <template>
+        <srai>CADU</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>QUEM E?</pattern>
+    <template>
+        <srai>CADU</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>QUEM * DIGITANDO</pattern>
+    <template>
+        <srai>CADU</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>COM * EU * DIGITANDO</pattern>
+    <template>
+        <srai>CADU</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>QUEM DIGITA</pattern>
+    <template>
+        <srai>CADU</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>COM QUEM DIGITO</pattern>
+    <template>
+        <srai>CADU</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>QUEM * AI</pattern>
+    <template>
+        <srai>CADU</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>QUEM * RESPONDENDO</pattern>
+    <template>
+        <srai>CADU</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>QUEM RESPONDEU</pattern>
+    <template>
+        <srai>CADU</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>QUEM FALA</pattern>
+    <template>
+        <srai>CADU</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>QUEM * FALANDO</pattern>
+    <template>
+        <srai>CADU</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>* ESTOU FALANDO</pattern>
+    <template>
+        <srai>CADU</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>* E VOCÊ</pattern>
+    <template>
+        <srai>CADU</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>* É VOCÊS</pattern>
+    <template>
+        <srai>CADU</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>* É VOCÊ</pattern>
+    <template>
+        <srai>CADU</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>* VOCÊ E</pattern>
+    <template>
+        <srai>CADU</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>* VOCÊ É</pattern>
+    <template>
+        <srai>CADU</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>* VOCE É</pattern>
+    <template>
+        <srai>CADU</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>* VOCE E</pattern>
+    <template>
+        <srai>CADU</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>* VOCÊ E *</pattern>
+    <template>
+        <srai>CADU</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>* VOCE É *</pattern>
+    <template>
+        <srai>CADU</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>* VOCE E *</pattern>
+    <template>
+        <srai>CADU</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>CADU</pattern>
+    <template>
+        <random>
+            <li>Eu sou o Cadu do Cake ERP. Eu serei seu guia para os próximos passos no sistema.</li>
+            <li>Sou o Cadu, respondo dúvidas sobre o Cake ERP.</li>
+            <li>Me chamo Cadu, sou uma inteligência artificial. Vou te ajudar a conhecer o Cake ERP</li>
+        </random>
+    </template>
 </category>
 
 </aiml>

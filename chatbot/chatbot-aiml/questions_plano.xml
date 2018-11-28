@@ -1,22 +1,112 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<aiml version="2.0" encoding="UTF-8" xmlns:aiml="http://alicebot.org/2001/AIML-1.0.1">
-<!-- basic_chat.aiml -->
-<!--author: eifmaciel-->
-<category>
-  <pattern>* COMO ESCOLHO UM PLANO?</pattern>
-  <template>
-    Para escolher seu plano, acesso o Cake ERP utilizando seu login e senha e clique na engrenagem no menu superior direito. Escolha a opção Meu Plano.
-  </template>
-</category>
+<aiml version="1.0" >
+    <!-- basic_chat.aiml -->
+    <!--author: eifmaciel-->
+    <category>
+        <pattern>* COMO ESCOLHO UM PLANO?</pattern>
+        <template>
+            Para escolher seu plano, acesso o Cake ERP utilizando seu login e senha e clique na engrenagem no menu superior direito. Escolha a opção Meu Plano.
+        </template>
+    </category>
 
-<category>
-  <pattern>* INATIVAR * CONTA *</pattern>
-  <template>
-      Caso nao queira mais utilizar o Cake ERP, você pode inativar a sua conta a qualquer momento.
-      Para isso, acesse, no menu superior, Configurações, Se estiver certo da inativação, clique no botão Inativar.
-      Feito! Sua conta está inativada.
-      Para mais detalhes pode ver em: https://suporte.cakeerp.com/portal/kb/articles/como-inativar-minha-conta
-  </template>
-</category>
+    <category>
+        <pattern>* INATIVAR * CONTA *</pattern>
+        <template>
+            Caso nao queira mais utilizar o Cake ERP, você pode inativar a sua conta a qualquer momento.
+            Para isso, acesse, no menu superior, Configurações, Se estiver certo da inativação, clique no botão Inativar.
+            Feito! Sua conta está inativada.
+            Para mais detalhes pode ver em: https://suporte.cakeerp.com/portal/kb/articles/como-inativar-minha-conta
+        </template>
+    </category>
 
+    <category>
+        <pattern>PDV DO CAKE FUNCIONA OFFILINE</pattern>
+        <template>
+            Sim, o PDV funciona online e offiline
+        </template>
+    </category>
+
+    <category>
+        <pattern>* PDV DO CAKE FUNCIONA OFFILINE</pattern>
+        <template>
+            Sim, o PDV funciona online e offiline
+        </template>
+    </category>
+
+    <category>
+        <pattern>* PDV DO CAKE FUNCIONA OFFILINE *</pattern>
+        <template>
+            <srai>PDV DO CAKE FUNCIONA OFFILINE</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* ACESSO O PDV</pattern>
+        <template>
+            Tem que baixar do site e seguir as orientações do manual.
+        </template>
+    </category>
+
+    <category>
+        <pattern>ROYALTIES</pattern>
+        <template>
+            Os royalties são cobranças mensais pagas pelos franqueados a empresa franqueadora, o que lhes garante a continuidade do uso da marca até o término do contrato. O dinheiro arrecadado da base franqueada também serve para investir em pesquisa para novos produtos e serviços, além de publicidade.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* ROYALTIES</pattern>
+        <template>
+            <srai>ROYALTIES</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* SUBCONTA *</pattern>
+        <template>
+            Uma subconta serve para você agrupar valores referentes a despesas, receitas ou custos.
+            Por exemplo, você pode criar uma subconta chamada Despesas Administrativas, que depois vinculará com uma Categoria Financeira.
+            Para cadastrar uma subconta no Cake ERP, acesse Cadastros > Financeiro > Subcontas. Clique em Adicionar.
+            No formulário, escreva o Nome para essa subconta, selecione qual Tipo de Conta e a qual Conta DRE se refere
+        </template>
+    </category>
+
+    <category>
+        <pattern>* SUBCONTA</pattern>
+        <template>
+            Uma subconta serve para você agrupar valores referentes a despesas, receitas ou custos.
+            Por exemplo, você pode criar uma subconta chamada Despesas Administrativas, que depois vinculará com uma Categoria Financeira.
+            Para cadastrar uma subconta no Cake ERP, acesse Cadastros > Financeiro > Subcontas. Clique em Adicionar.
+            No formulário, escreva o Nome para essa subconta, selecione qual Tipo de Conta e a qual Conta DRE se refere
+        </template>
+    </category>
+
+    <category>
+        <pattern>* CADASTRAR CATEGORIA FINANCEIRA *</pattern>
+        <template>
+            Para cadastrar uma Categoria, você deve acessar Cadastros > Financeiro > Categorias e clicar em Adicionar.
+            No formulário que irá aparecer, você deve preencher com o Nome da categoria e selecionar a qual Subconta ela se refere.
+        </template>
+    </category>
+    <category>
+        <pattern>* CADASTRAR CATEGORIA FINANCEIRA</pattern>
+        <template>
+            Para cadastrar uma Categoria, você deve acessar Cadastros > Financeiro > Categorias e clicar em Adicionar.
+            No formulário que irá aparecer, você deve preencher com o Nome da categoria e selecionar a qual Subconta ela se refere.
+        </template>
+    </category>
+    <category>
+        <pattern>* CATEGORIA FINANCEIRA *</pattern>
+        <template>
+            As categorias financeiras estão diretamente ligadas as Subcontas. Elas ajudam a separar suas movimentações financeiras e agrupar no DRE, facilitando seu dia a dia.
+            Por exemplo: você possuiu uma subconta de Despesas com Escritório, e dentro dela existem as categorias: Cadernos, Canetas, Borrachas, etc. Assim você tem todas as suas despesas, receitas ou custos organizados.
+        </template>
+    </category>
+    <category>
+        <pattern>* CATEGORIA FINANCEIRA</pattern>
+        <template>
+            As categorias financeiras estão diretamente ligadas as Subcontas. Elas ajudam a separar suas movimentações financeiras e agrupar no DRE, facilitando seu dia a dia.
+            Por exemplo: você possuiu uma subconta de Despesas com Escritório, e dentro dela existem as categorias: Cadernos, Canetas, Borrachas, etc. Assim você tem todas as suas despesas, receitas ou custos organizados.
+        </template>
+    </category>
 </aiml>

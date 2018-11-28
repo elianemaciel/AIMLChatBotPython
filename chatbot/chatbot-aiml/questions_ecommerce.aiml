@@ -1,15 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<aiml version="2.0" encoding="UTF-8" xmlns:aiml="http://alicebot.org/2001/AIML-1.0.1">
-<!-- basic_chat.aiml -->
-<!--author: eifmaciel-->
-<category>
-  <pattern>* ECOMMERCE *</pattern>
-  <template> 
-    Antes de você emitir sua nota fiscal, existem alguns pontos que você precisa prestar atenção,
-    tanto dentro do sistema, quanto na sua empresa.
-    Para a sua empresa emitir nota fiscal eletrônica, é necessário que ela possua: CNPJ, Inscrição Estadual,
-    Credenciamento na SEFAZ (Secretaria da Fazenda) do seu estado e Certificado digital
-  </template>
-</category>
+<aiml version="1.0">
+    <!-- basic_chat.aiml -->
+    <!--author: eifmaciel-->
+    <category>
+        <pattern>* BAIXAR VENDAS * RAKUTEN *</pattern>
+        <template>
+            O Baixar Vendas é o comando que pode ser executado para que o sistema busque as vendas com pagamento aprovado e crie os pedidos no Cake, faturando eles e deixando pronto para emissão das notas fiscais
+        </template>
+    </category>
+
+    <category>
+        <pattern>* BAIXAR VENDAS DA RAKUTEN</pattern>
+        <template>
+            O Baixar Vendas é o comando que pode ser executado para que o sistema busque as vendas com pagamento aprovado e crie os pedidos no Cake, faturando eles e deixando pronto para emissão das notas fiscais
+            Quando criado o pedido no Cake ERP, ele leva nas observações o número do pedido na Rakuten que gerou aquele pedido no Cake. Também fica registrado nos logs do e-commerce o momento da sincronização do pedido.
+            Para baixar as vendas, acesse Cadastros > Integrações > E-commerce.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* LOJAS VIRTUAIS * POSSUI INTEGRACAO *</pattern>
+        <template>
+            Com a Rakuten, VNDA, e siscommerce
+        </template>
+    </category>
+
+    <category>
+        <pattern>* INTEGRACAO COM O E-COMMERCE *</pattern>
+        <template>
+            O Cake ERP possui integração com os e-commerces Rakuten, VNDA, e siscommerce
+        </template>
+    </category>
 
 </aiml>

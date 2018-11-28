@@ -11,3 +11,16 @@
 * source myvenv/bin/activate
 
 * pip3 install -r requirements.txt
+
+# Rodando
+
+* cd chatbot
+* python manage.py runserver
+
+# Rodando só pelo python
+
+* python3 main.py
+
+# Arquivos AIML
+
+* chatbot/chatbot-aiml/
