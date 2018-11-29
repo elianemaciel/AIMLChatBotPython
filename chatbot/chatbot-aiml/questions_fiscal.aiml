@@ -304,6 +304,13 @@
     </category>
 
     <category>
+        <pattern>* É O CAKE</pattern>
+        <template>
+            <srai>CAKE ERP</srai>
+        </template>
+    </category>
+
+    <category>
         <pattern>CAKE ERP</pattern>
         <template>
             O Cake ERP é um sistema de gestão on-line, com inteligência e melhores práticas de mercado, feito para micro e pequenos lojistas, distribuidores e franquias.

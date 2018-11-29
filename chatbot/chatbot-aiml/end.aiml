@@ -14,7 +14,7 @@
 
     <category>
         <pattern>SIM</pattern>
-        <that>GOSTARIA DE FALAR COM ALGUM DE NOSSOS ATENDENTES*</that>
+        <that>GOSTARIA DE FALAR COM ALGUM DE NOSSOS ATENDENTES</that>
         <template>
             Vou te encaminhar para um de nossos atendentes. Obrigado pela paciencia! Até a próxima!
         </template>
